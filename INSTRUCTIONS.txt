@@ -1,0 +1,15 @@
+Instructions:
+===============================
+Compile from within the folder:
+	javac *.java
+
+Run with java:
+	java MazeSolver
+
+This will run all of the 5 examples provided. Hence these files are required in the same folder
+and the mazes will be solved in this order:
+	input.txt
+	small.txt
+	medium_input.txt
+	large_input.txt
+	sparse_medium.txt
