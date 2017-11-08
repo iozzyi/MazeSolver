@@ -56,12 +56,12 @@ public class MazeSolver {
 	}
 	
 	public static void main(String[] args) throws FileNotFoundException {
-		String[] tests = {"input.txt", "small.txt", "medium_input.txt", "large_input.txt", "sparse_medium.txt"};
 		long t1, t2;
-		for (String test : tests) {
-			Maze testMaze = Maze.readFromFile(test);
+		Maze maze;
+		for (String filePath : args) {
+			maze = Maze.readFromFile(filePath);
 			t1 = System.currentTimeMillis();
-			markPath(testMaze);
+			markPath(maze);
 			t2 = System.currentTimeMillis();
 			System.out.printf("Time taken: %.3f seconds.%n%n", (t2-t1)/1000d);
 		}

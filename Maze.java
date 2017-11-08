@@ -104,39 +104,10 @@ public class Maze {
 		STDOUT_END = 'E',
 		STDOUT_ERROR = '?';
 	
-	// test maze loading and printing
-	
 	public static void main(String[] args) throws FileNotFoundException {
-		int width = 4, 
-				height = 5, 
-				start_x = 0, 
-				start_y = 0, 
-				end_x = 1, 
-				end_y = 4;
-		int[][] maze_data = {
-				{0,0,0,1},
-				{1,1,0,0},
-				{1,1,1,0},
-				{1,0,0,0},
-				{1,0,1,1}
-		};
-		Maze testMaze = new Maze(width, height, start_x, start_y, end_x, end_y, maze_data);
-		System.out.println(testMaze);
-		
-		testMaze = Maze.readFromFile("input.txt");
-		System.out.println(testMaze);
-		
-		testMaze = Maze.readFromFile("small.txt");
-		System.out.println(testMaze);
-		
-		testMaze = Maze.readFromFile("medium_input.txt");
-		System.out.println(testMaze);
-		
-		testMaze = Maze.readFromFile("large_input.txt");
-		System.out.println(testMaze);
-		
-		testMaze = Maze.readFromFile("sparse_medium.txt");
-		System.out.println(testMaze);
+		for (String filePath : args) {
+			System.out.println(Maze.readFromFile(filePath));
+		}
 	}
 
 }
